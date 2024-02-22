@@ -1,5 +1,6 @@
 const friend1 = "Tonmoy";
-const friend2 = "Inzamamul";
+const friend2 = "Inzamamul it's is mohe";
+console.log(friend2);
 
 function reverseName(friendOne, friendTwo) {
     const friendOneLength = friendOne.length;
@@ -14,8 +15,10 @@ function reverseName(friendOne, friendTwo) {
 }
 
 const result = reverseName(friend1, friend2);
-console.log(result);
-
+// console.log(result);
+// No decision has been taken on this yet
+// This has not been decided yet
+// Around 9 am to 10 pm
 // ========================================================================
 
 // const friend1 = 'Forhad';

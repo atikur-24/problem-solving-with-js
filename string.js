@@ -38,25 +38,25 @@ function reverseName(friendOne, friendTwo) {
     return reversedString;
 }
 const result2 = reverseName(friend11, friend22);
-console.log(result2);
+// console.log(result2);
 
 // ====================================================================
 
-// function publicBusFare (participants) {
-//      if (typeof participants != 'number' || participants < 50) {
-//           return 'provide valid participants...';
-//      }
-//      let remaining = 0;
-//      remaining = participants % 50;
-//      if (remaining >= 11) {
-//           remaining = remaining % 11;
-//      }
-//      let costOfPublicBus =remaining * 250;
-//      return costOfPublicBus;
-// }
+function publicBusFare(participants) {
+    if (typeof participants != "number" || participants < 50) {
+        return "provide valid participants...";
+    }
+    let remaining = 0;
+    remaining = participants % 50;
+    if (remaining >= 11) {
+        remaining = remaining % 11;
+    }
+    let costOfPublicBus = remaining * 250;
+    return costOfPublicBus;
+}
 
-// const costOfPublicBus = publicBusFare(365);
-// console.log(costOfPublicBus);
+const costOfPublicBus = publicBusFare(365);
+console.log(costOfPublicBus);
 
 // ====================================================================
 

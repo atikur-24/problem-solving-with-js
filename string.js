@@ -1,6 +1,5 @@
 const friend1 = "Tonmoy";
-const friend2 = "Inzamamul it's is mohe";
-console.log(friend2);
+const friend2 = "Inzamamul";
 
 function reverseName(friendOne, friendTwo) {
     const friendOneLength = friendOne.length;
@@ -16,32 +15,30 @@ function reverseName(friendOne, friendTwo) {
 
 const result = reverseName(friend1, friend2);
 // console.log(result);
-// No decision has been taken on this yet
-// This has not been decided yet
-// Around 9 am to 10 pm
+
 // ========================================================================
 
-// const friend1 = 'Forhad';
-// const friend2 = 'Emon';
+const friend11 = "Forhad";
+const friend22 = "Emon";
 
-// function reverseName(friendOne, friendTwo) {
-//      const friendOneLength = friendOne.length;
-//      const friendTwoLength = friendTwo.length;
-//      let largeName = '';
-//      if (friendOneLength > friendTwoLength) {
-//           largeName = friendOne;
-//      } else {
-//           largeName = friendTwo;
-//      }
-//      let reversedString = '';
-//      for (let i = largeName.length - 1; i >= 0; i--) {
-//           const element = largeName[i];
-//           reversedString = reversedString + element;
-//      }
-//      return reversedString;
-// }
-// const result = reverseName(friend1, friend2);
-// console.log(result);
+function reverseName(friendOne, friendTwo) {
+    const friendOneLength = friendOne.length;
+    const friendTwoLength = friendTwo.length;
+    let largeName = "";
+    if (friendOneLength > friendTwoLength) {
+        largeName = friendOne;
+    } else {
+        largeName = friendTwo;
+    }
+    let reversedString = "";
+    for (let i = largeName.length - 1; i >= 0; i--) {
+        const element = largeName[i];
+        reversedString = reversedString + element;
+    }
+    return reversedString;
+}
+const result2 = reverseName(friend11, friend22);
+console.log(result2);
 
 // ====================================================================
 

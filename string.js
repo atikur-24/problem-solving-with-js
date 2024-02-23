@@ -1,62 +1,46 @@
-const friend1 = "Tonmoy";
-const friend2 = "Inzamamul";
+/* ------------ Find the index number of the largest string in the list of members and return reverse output ------------ */
 
-function reverseName(friendOne, friendTwo) {
-    const friendOneLength = friendOne.length;
-    const friendTwoLength = friendTwo.length;
-    if (friendOneLength > friendTwoLength) {
-        const restult = friendOne.split("").reverse().join("");
-        return restult;
+const memberOne = "Abdullah Al Masud";
+const memberTwo = "Nafees Imtiaz Shawon";
+const memberThree = "Sihab Uddin Molla";
+
+const findLargestString = (memberOne, memberTwo, memberThree) => {
+    const memberOneLength = memberOne.length;
+    const memberTwoLength = memberTwo.length;
+    const memberThreeLength = memberThree.length;
+
+    if (memberOneLength > memberTwoLength && memberOneLength > memberThreeLength) {
+        const result = memberOne.split("").reverse().join("");
+        return result;
+    } else if (memberTwoLength > memberOneLength && memberTwoLength > memberThreeLength) {
+        const result = memberTwo.split("").reverse().join("");
+        return result;
     } else {
-        const restult = friendTwo.split("").reverse().join("");
-        return restult;
+        const result = memberThree.split("").reverse().join("");
+        return result;
     }
-}
+};
 
-const result = reverseName(friend1, friend2);
-// console.log(result);
-
-// ========================================================================
-
-const friend11 = "Forhad";
-const friend22 = "Emon";
-
-function reverseName(friendOne, friendTwo) {
-    const friendOneLength = friendOne.length;
-    const friendTwoLength = friendTwo.length;
-    let largeName = "";
-    if (friendOneLength > friendTwoLength) {
-        largeName = friendOne;
-    } else {
-        largeName = friendTwo;
-    }
-    let reversedString = "";
-    for (let i = largeName.length - 1; i >= 0; i--) {
-        const element = largeName[i];
-        reversedString = reversedString + element;
-    }
-    return reversedString;
-}
-const result2 = reverseName(friend11, friend22);
-// console.log(result2);
+const largestStr = findLargestString(memberOne, memberTwo, memberThree);
+// console.log(largestStr);
 
 // ====================================================================
 
-function publicBusFare(participants) {
-    if (typeof participants != "number" || participants < 50) {
-        return "provide valid participants...";
-    }
-    let remaining = 0;
-    remaining = participants % 50;
-    if (remaining >= 11) {
-        remaining = remaining % 11;
-    }
-    let costOfPublicBus = remaining * 250;
-    return costOfPublicBus;
-}
+// function publicBusFare(participants) {
+//     if (typeof participants != "number" || participants < 50) {
+//         return "provide valid participants...";
+//     }
+//     let remaining = 0;
+//     remaining = participants % 50;
+//     if (remaining >= 11) {
+//         remaining = remaining % 11;
+//     }
+//     let costOfPublicBus = remaining * 250;
+//     return costOfPublicBus;
+// }
 
-const costOfPublicBus = publicBusFare(365);
-console.log(costOfPublicBus);
+// const costOfPublicBus = publicBusFare(365);
+// console.log(costOfPublicBus);
 
 // ====================================================================
 
@@ -78,3 +62,5 @@ console.log(costOfPublicBus);
 
 // const myString = 'I am a innocent boy';
 // const reversed = reverseText(myString);
+
+// =======================================================

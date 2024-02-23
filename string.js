@@ -1,5 +1,4 @@
 /* ------------ Find the index number of the largest string in the list of members and return reverse output ------------ */
-
 const memberOne = "Abdullah Al Masud";
 const memberTwo = "Nafees Imtiaz Shawon";
 const memberThree = "Sihab Uddin Molla";
@@ -24,23 +23,22 @@ const findLargestString = (memberOne, memberTwo, memberThree) => {
 const largestStr = findLargestString(memberOne, memberTwo, memberThree);
 // console.log(largestStr);
 
-// ====================================================================
+function publicBusFare(participants) {
+    if (typeof participants != "number" || participants <= 50) {
+        return "provide valid participants...";
+    }
+    let remaining = 0;
+    remaining = participants % 50;
+    if (remaining >= 11) {
+        remaining = remaining % 11;
+    }
+    console.log(remaining);
+    let costOfPublicBus = remaining * 250;
+    return costOfPublicBus;
+}
 
-// function publicBusFare(participants) {
-//     if (typeof participants != "number" || participants < 50) {
-//         return "provide valid participants...";
-//     }
-//     let remaining = 0;
-//     remaining = participants % 50;
-//     if (remaining >= 11) {
-//         remaining = remaining % 11;
-//     }
-//     let costOfPublicBus = remaining * 250;
-//     return costOfPublicBus;
-// }
-
-// const costOfPublicBus = publicBusFare(365);
-// console.log(costOfPublicBus);
+const costOfPublicBus = publicBusFare(51);
+console.log(costOfPublicBus);
 
 // ====================================================================
 

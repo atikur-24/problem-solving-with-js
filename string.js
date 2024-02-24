@@ -23,4 +23,10 @@ const findLargestString = (memberOne, memberTwo, memberThree) => {
 const largestStr = findLargestString(memberOne, memberTwo, memberThree);
 // console.log(largestStr);
 
-/* -----------reversed string------------- */
+/* ----------- string ------------- */
+
+let str = "Welcome to GeeksforGeeks";
+let index = 11;
+let character = str.slice(0, 7);
+
+console.log(character);

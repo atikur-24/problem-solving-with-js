@@ -24,9 +24,3 @@ const largestStr = findLargestString(memberOne, memberTwo, memberThree);
 // console.log(largestStr);
 
 /* ----------- string ------------- */
-
-let str = "Welcome to GeeksforGeeks";
-let index = 11;
-let character = str.slice(0, 7);
-
-console.log(character);

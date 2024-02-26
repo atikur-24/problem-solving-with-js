@@ -9,13 +9,13 @@ const findLargestString = (memberOne, memberTwo, memberThree) => {
     const memberThreeLength = memberThree.length;
 
     if (memberOneLength > memberTwoLength && memberOneLength > memberThreeLength) {
-        const result = memberOne.split("").reverse().join("");
+        const result = memberOne.split(" ").reverse().join(" ");
         return result;
     } else if (memberTwoLength > memberOneLength && memberTwoLength > memberThreeLength) {
-        const result = memberTwo.split("").reverse().join("");
+        const result = memberTwo.split(" ").reverse().join(" ");
         return result;
     } else {
-        const result = memberThree.split("").reverse().join("");
+        const result = memberThree.split(" ").reverse().join(" ");
         return result;
     }
 };
@@ -23,4 +23,16 @@ const findLargestString = (memberOne, memberTwo, memberThree) => {
 const largestStr = findLargestString(memberOne, memberTwo, memberThree);
 // console.log(largestStr);
 
-/* ----------- string ------------- */
+/* ----------- Given a string, the task is to reverse the order of the words in the given string ----------- */
+function reverseWords(inputString) {
+    let reversedString;
+    if (typeof inputString === "string" && inputString.length > 0) {
+        const wordsArray = inputString.split(" ");
+        const reversedArray = wordsArray.reverse();
+        reversedString = reversedArray.join(" ");
+    } else reversedString = "please input valid string";
+    return reversedString;
+}
+const input = "i like this program very much";
+const output = reverseWords(input);
+console.log(output);

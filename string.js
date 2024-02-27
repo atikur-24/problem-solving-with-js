@@ -37,6 +37,7 @@ const input = "i like this program very much";
 const output = reverseWords(input);
 // console.log(output);
 
+/* ----------- Given a set of strings, find the longest common prefix ----------- */
 function longestCommonPrefix(arr) {
     if (arr.length === 0) return "";
 
@@ -62,3 +63,42 @@ function longestCommonPrefix(arr) {
 // Driver code to test the function
 const inputArr = ["geeksforgeeks", "geeks", "geek", "geezer"];
 // console.log("The longest Common Prefix is:", longestCommonPrefix(inputArr));
+
+function areKAnagrams(s1, s2, k) {
+    if (s1.length !== s2.length) {
+        return false;
+    }
+
+    const map = new Map();
+    for (let i = 0; i < s1.length; i++) {
+        const ch = s1[i];
+        if (map.has(ch)) {
+            map.set(ch, map.get(ch) + 1);
+        } else {
+            map.set(ch, 1);
+        }
+    }
+
+    for (let i = 0; i < s2.length; i++) {
+        const ch = s2[i];
+        if (map.has(ch) && map.get(ch) > 0) {
+            map.set(ch, map.get(ch) - 1);
+        }
+    }
+
+    let count = 0;
+    for (const [ch, freq] of map.entries()) {
+        count += freq;
+    }
+
+    return count <= k;
+}
+
+const str1 = "anagram";
+const str2 = "grammar";
+const k = 2;
+if (areKAnagrams(str1, str2, k)) {
+    console.log("Yes");
+} else {
+    console.log("No");
+}

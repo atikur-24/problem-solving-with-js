@@ -35,4 +35,30 @@ function reverseWords(inputString) {
 }
 const input = "i like this program very much";
 const output = reverseWords(input);
-console.log(output);
+// console.log(output);
+
+function longestCommonPrefix(arr) {
+    if (arr.length === 0) return "";
+
+    let result = arr[0];
+
+    for (let i = 1; i < arr.length; i++) {
+        let j = 0;
+
+        while (j < result.length && j < arr[i].length && result[j] === arr[i][j]) {
+            j++;
+        }
+
+        result = result.substring(0, j);
+
+        if (result === "") {
+            return "-1";
+        }
+    }
+
+    return result;
+}
+
+// Driver code to test the function
+const inputArr = ["geeksforgeeks", "geeks", "geek", "geezer"];
+// console.log("The longest Common Prefix is:", longestCommonPrefix(inputArr));

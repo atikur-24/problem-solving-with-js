@@ -73,4 +73,4 @@ function numberToWords(number) {
     return convert(number);
 }
 
-console.log(numberToWords(9000));
+// console.log(numberToWords(570));

@@ -15,4 +15,15 @@ function sumOfDigits(number) {
     return sum;
 }
 
-console.log(sumOfDigits(723));
+// console.log(sumOfDigits(723));
+
+/* Problem: a function that takes a number as input and returns true if it's a prime number, and false otherwise */
+function isPrime(number) {
+    if (number <= 1) return false;
+    for (let i = 2; i <= Math.sqrt(number); i++) {
+        if (number % i === 0) return false;
+    }
+    return true;
+}
+
+// console.log(isPrime(7));

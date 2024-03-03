@@ -27,3 +27,14 @@ function isPrime(number) {
 }
 
 // console.log(isPrime(7));
+
+/* Problem: generate the Fibonacci sequence up to a specified number of terms. The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones, usually starting with 0 and 1. */
+function fibonacciSequence(count) {
+    const sequence = [0, 1];
+    for (let i = 2; i < count; i++) {
+        sequence[i] = sequence[i - 1] + sequence[i - 2];
+    }
+    return sequence;
+}
+
+// console.log(fibonacciSequence(5));

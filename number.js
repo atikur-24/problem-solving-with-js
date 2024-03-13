@@ -87,4 +87,18 @@ function findLeapYear(year) {
     }
 }
 const years = [2023, 2024, 2025, 2028, 2030];
-findLeapYear(years);
+// findLeapYear(years);
+
+function celToFah(celsius) {
+    let fahrenheit = (celsius * 9) / 5 + 32;
+    return fahrenheit;
+}
+const cel = 30;
+const fahOutput = celToFah(cel);
+console.log(fahOutput);
+
+function fahrenheitToCelsius(fahrenheit) {
+    let celsius = ((fahrenheit - 32) * 5) / 9;
+    return celsius.toFixed(2);
+}
+// console.log(fahrenheitToCelsius(80))

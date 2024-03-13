@@ -102,3 +102,17 @@ function fahrenheitToCelsius(fahrenheit) {
     return celsius.toFixed(2);
 }
 // console.log(fahrenheitToCelsius(80))
+
+function maxInArray(numbers) {
+    let largest = numbers[0];
+    for (let i = 0; i < numbers.length; i++) {
+        const element = numbers[i];
+        if (element > largest) {
+            largest = element;
+        }
+    }
+    return largest;
+}
+const heights = [167, 190, 120, 195, 137];
+const tallest = maxInArray(heights);
+// console.log('The most tallest person is : ', tallest);

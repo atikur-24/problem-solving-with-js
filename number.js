@@ -74,3 +74,17 @@ function numberToWords(number) {
 }
 
 // console.log(numberToWords(570));
+
+// Problem: find leap year
+function findLeapYear(year) {
+    for (let i = 0; i < year.length; i++) {
+        const element = year[i];
+        if ((0 == element % 4 && 0 != element % 100) || 0 == element % 400) {
+            console.log(element, "is leap year");
+        } else {
+            console.log(element, "is not leap year");
+        }
+    }
+}
+const years = [2023, 2024, 2025, 2028, 2030];
+findLeapYear(years);

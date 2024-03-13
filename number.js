@@ -116,3 +116,19 @@ function maxInArray(numbers) {
 const heights = [167, 190, 120, 195, 137];
 const tallest = maxInArray(heights);
 // console.log('The most tallest person is : ', tallest);
+
+function woodCalculation(chairQuantity, tableQuantity, bedQuantity) {
+    const perChairWood = 3;
+    const perTableWood = 10;
+    const perBedWood = 50;
+
+    const chairWood = chairQuantity * perChairWood;
+    const tableWood = tableQuantity * perTableWood;
+    const bedWood = bedQuantity * perBedWood;
+
+    const totalWood = chairWood + tableWood + bedWood;
+    return totalWood;
+}
+
+const totalWood = woodCalculation(5, 2, 1);
+//   console.log(totalWood);

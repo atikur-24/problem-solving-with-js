@@ -1,3 +1,4 @@
+// Problem: Break an Arm
 function findAD(AB, AC, BC, ratio) {
     const areaADE = ratio / (ratio + 1);
     const areaBDEC = 1 / (ratio + 1);
@@ -17,7 +18,6 @@ function breakAnArm(T, testCases) {
     return results;
 }
 
-// Example usage with the sample input
 const T = 4;
 const testCases = [
     [100, 100, 100, 2],

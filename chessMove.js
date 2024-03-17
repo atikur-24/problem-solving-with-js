@@ -1,3 +1,5 @@
+// Problem:  Chess Move both horizontally and vertically
+
 function chessMove(t, testCases) {
     const moves = [];
     for (let i = 0; i < t; i++) {
